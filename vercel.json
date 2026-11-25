@@ -1,0 +1,6 @@
+<html>
+<style>
+   div{min-height:1em;}
+</style>
+<body>{<br/>  &quot;rewrites&quot;: [<br/>    { &quot;source&quot;: &quot;/api/(.*)&quot;, &quot;destination&quot;: &quot;/api/index&quot; }<br/>  ]<br/>}<br/></body>
+</html>
