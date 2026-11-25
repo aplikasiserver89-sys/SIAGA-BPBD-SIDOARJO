@@ -4,11 +4,6 @@ import express, { NextFunction, Request, Response } from 'express';
 import fs from 'fs';
 import path from 'path';
 import {
-  INITIAL_AGENDAS,
-  INITIAL_LOCATIONS,
-  INITIAL_UNITS,
-} from './src/data/initialData';
-import {
   AgendaCategory,
   AgendaItem,
   AgendaStatus,
@@ -130,9 +125,9 @@ function loadStore(): StoreData {
 
   const initial: StoreData = {
     users: [],
-    agendas: INITIAL_AGENDAS,
-    units: INITIAL_UNITS,
-    locations: INITIAL_LOCATIONS,
+    agendas: [],
+    units: [],
+    locations: [],
     auditLogs: [],
   };
   fs.writeFileSync(STORE_PATH, JSON.stringify(initial, null, 2), 'utf8');

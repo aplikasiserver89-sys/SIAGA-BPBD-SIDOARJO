@@ -89,26 +89,28 @@ export const InputEBuddyView: React.FC<InputEBuddyViewProps> = ({
           )}
         </div>
 
-        <div>
-          <div className="text-xs font-medium text-slate-500 mb-2">
-            Uji cepat dengan contoh teks surat masuk:
+        {EBUDDY_SAMPLES.length > 0 && (
+          <div>
+            <div className="text-xs font-medium text-slate-500 mb-2">
+              Uji cepat dengan contoh teks surat masuk:
+            </div>
+            <div className="flex flex-wrap gap-1.5">
+              {EBUDDY_SAMPLES.map((sample) => (
+                <button
+                  key={sample.id}
+                  type="button"
+                  onClick={() => {
+                    setRawMemoText(sample.text);
+                    handleExtractAndOpen(sample.text);
+                  }}
+                  className="px-2.5 py-1.5 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-sky-50 hover:text-sky-800 rounded-md transition-colors text-left"
+                >
+                  {sample.label}
+                </button>
+              ))}
+            </div>
           </div>
-          <div className="flex flex-wrap gap-1.5">
-            {EBUDDY_SAMPLES.map((sample) => (
-              <button
-                key={sample.id}
-                type="button"
-                onClick={() => {
-                  setRawMemoText(sample.text);
-                  handleExtractAndOpen(sample.text);
-                }}
-                className="px-2.5 py-1.5 text-xs font-medium text-slate-700 bg-slate-100 hover:bg-sky-50 hover:text-sky-800 rounded-md transition-colors text-left"
-              >
-                {sample.label}
-              </button>
-            ))}
-          </div>
-        </div>
+        )}
 
         <div>
           <label
