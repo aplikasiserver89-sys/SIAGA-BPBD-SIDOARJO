@@ -1,0 +1,8 @@
+{
+  "name": "Remix SIAGA AGENDA BPBD — Kab. Sidoarjo",
+  "description": "Sistem Informasi \u0026 Pemantauan Agenda Kegiatan Real-Time BPBD Kabupaten Sidoarjo untuk pengelolaan surat masuk e-Buddy, deteksi bentrok waktu WIB, dan rekap WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
